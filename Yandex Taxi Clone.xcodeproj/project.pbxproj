@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		81032AAF2F843763006DA300 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 81032AAE2F843762006DA300 /* GoogleService-Info (1).plist */; };
+		81AF22F62F82E685007FD9C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF22F52F82E685007FD9C4 /* ViewController.swift */; };
+		81AF23112F82ED6B007FD9C4 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 81AF23102F82ED6B007FD9C4 /* FirebaseCore */; };
+		81AF23132F82ED80007FD9C4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 81AF23122F82ED80007FD9C4 /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		81AF22EE2F82E685007FD9C4 /* Yandex Taxi Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yandex Taxi Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81032AA12F8434E6006DA300 /* Yandex Taxi Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yandex Taxi Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81032AAE2F843762006DA300 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		81032AB02F843A09006DA300 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81AF22F52F82E685007FD9C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81AF23142F82EEC0007FD9C4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AF23112F82ED6B007FD9C4 /* FirebaseCore in Frameworks */,
+				81AF23132F82ED80007FD9C4 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,16 +59,36 @@
 			isa = PBXGroup;
 			children = (
 				81AF22F02F82E685007FD9C4 /* Yandex Taxi Clone */,
-				81AF22EF2F82E685007FD9C4 /* Products */,
+				81AF23082F82E7BE007FD9C4 /* View */,
+				81AF230B2F82E7E6007FD9C4 /* Controller */,
+				81AF230F2F82ED6B007FD9C4 /* Frameworks */,
+				81032AA12F8434E6006DA300 /* Yandex Taxi Clone.app */,
+				81032AAE2F843762006DA300 /* GoogleService-Info (1).plist */,
 			);
 			sourceTree = "<group>";
 		};
-		81AF22EF2F82E685007FD9C4 /* Products */ = {
+		81AF23082F82E7BE007FD9C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				81AF22EE2F82E685007FD9C4 /* Yandex Taxi Clone.app */,
+				81032AB02F843A09006DA300 /* Extensions.swift */,
+				81AF23142F82EEC0007FD9C4 /* LoginController.swift */,
 			);
-			name = Products;
+			path = View;
+			sourceTree = "<group>";
+		};
+		81AF230B2F82E7E6007FD9C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81AF22F52F82E685007FD9C4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		81AF230F2F82ED6B007FD9C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +111,11 @@
 			);
 			name = "Yandex Taxi Clone";
 			packageProductDependencies = (
+				81AF23102F82ED6B007FD9C4 /* FirebaseCore */,
+				81AF23122F82ED80007FD9C4 /* FirebaseAuth */,
 			);
 			productName = "Yandex Taxi Clone";
-			productReference = 81AF22EE2F82E685007FD9C4 /* Yandex Taxi Clone.app */;
+			productReference = 81032AA12F8434E6006DA300 /* Yandex Taxi Clone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -107,8 +142,11 @@
 			);
 			mainGroup = 81AF22E52F82E685007FD9C4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				81AF230E2F82EC99007FD9C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 81AF22EF2F82E685007FD9C4 /* Products */;
+			productRefGroup = 81AF22E52F82E685007FD9C4;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -122,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81032AAF2F843763006DA300 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AF22F62F82E685007FD9C4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +190,6 @@
 				INFOPLIST_FILE = "Yandex Taxi Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -182,7 +221,6 @@
 				INFOPLIST_FILE = "Yandex Taxi Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -345,6 +383,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81AF230E2F82EC99007FD9C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81AF23102F82ED6B007FD9C4 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81AF230E2F82EC99007FD9C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		81AF23122F82ED80007FD9C4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81AF230E2F82EC99007FD9C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81AF22E62F82E685007FD9C4 /* Project object */;
 }

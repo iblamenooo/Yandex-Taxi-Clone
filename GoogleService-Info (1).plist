@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>134203686679-jf81u9c39fuscp7d10kftjpj0fp5c1il.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.134203686679-jf81u9c39fuscp7d10kftjpj0fp5c1il</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAF0-Gnz3mAB18iY7U_ugmWz4z9oYTT9Z4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>134203686679</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lalalala.Yandex-Taxi-Clone</string>
+	<key>PROJECT_ID</key>
+	<string>yandex-taxi-clone</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yandex-taxi-clone.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:134203686679:ios:b54cd67800cd030cf68152</string>
+</dict>
+</plist>
