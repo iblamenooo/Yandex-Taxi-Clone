@@ -37,7 +37,26 @@ class LoginController:UIViewController {
         return tf.textField(withPlaceholder: "Password", isSecureTextEntry: true)
     }
     
+    private lazy var loginButton:UIButton = {
+        let button = UIButton()
+        button.setTitle("Log In", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        //button set target
+        return button
+    }
     
+    
+    private lazy dontHaveAccountButton:UIButton = {
+        let button = UIButton(type: .system)
+        let attributedTitle = NSMutableAttributedString(string: "Don't have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+                
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+                
+//        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+                
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
