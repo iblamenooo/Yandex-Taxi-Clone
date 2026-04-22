@@ -7,8 +7,22 @@
 import UIKit
 import MapKit
 
+extension UIColor {
+    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+        return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
+    }
+    
+    static let backgroundColor = UIColor.rgb(red: 25, green: 25, blue: 25)
+    static let mainBlueTint = UIColor.rgb(red: 17, green: 154, blue: 257)
+    static let outlineStrokeColor = UIColor.rgb(red: 234, green: 46, blue: 111)
+    static let trackStrokeColor = UIColor.rgb(red: 56, green: 25, blue: 49)
+    static let pulsatingFillColor = UIColor.rgb(red: 86, green: 30, blue: 63)
+}
+
+
 extension UIView {
     //переиспользуемый UI Builder Method
+
     func containterInputView(image:UIImage, textField:UITextField? = nil, segmentedControl: UISegmentedControl? = nil) -> UIView {
         let view = UIView()
         
@@ -18,7 +32,7 @@ extension UIView {
         view.addSubview(imageView)
         
         if let textField = textField {
-            imageView.centerY(inView: view)
+            imageView.centerY(inView:view)
             imageView.anchor(left:view.leftAnchor, paddingLeft:8, width:24, height:24)
             
             view.addSubview(textField)
@@ -30,14 +44,14 @@ extension UIView {
         if let sc = segmentedControl {
             imageView.anchor(top:view.topAnchor, left:view.leftAnchor, paddingTop:-8, paddingLeft:8, width:24, height:24)
             view.addSubview(sc)
-            sc.centerY(inview:view, constant:8)
+            sc.centerY(inView:view, constant:8)
             sc.anchor(left:view.leftAnchor, right:view.rightAnchor, paddingLeft:8, paddingRight:8)
         }
         
         let separatorView = UIView()  //для нижной линии ______________ что то вроде этого
         separatorView.backgroundColor = .lightGray
         view.addSubview(separatorView)
-        separatorView.anchor(left:view.leftAnchor, botttom:view.bottomAnchor, right:view.rightAnchor, paddingLeft:8, height:0.75 )
+        separatorView.anchor(left:view.leftAnchor, bottom:view.bottomAnchor, right:view.rightAnchor, paddingLeft:8, height:0.75 )
         
         return view
     }
@@ -113,6 +127,16 @@ extension UITextField {
         tf.isSecureTextEntry = isSecureTextEntry
         tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         return tf
+    }
+}
+
+extension UIApplication {
+    var keyWindow:UIWindow? {
+        return UIApplication.shared.connectedScenes
+            .filter { $0.activationState == .foregroundActive }
+            .first(where: { $0 is UIWindow })
+            .flatMap({ $0 as? UIWindowScene })?.windows
+            .first(where :\.isKeyWindow)
     }
 }
 
